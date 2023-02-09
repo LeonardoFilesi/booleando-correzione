@@ -23,13 +23,26 @@ a {
     text-decoration: none;
 }
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.align-items-center {
+    align-items: center;
+}
 
 .container {
     width: 80%;
     max-width: 1100px;
     margin: 0 auto;
 }
+
+.col {
+    width: calc(100% / 3);
+    padding: 20px;
+}
+
 /*---------------------------END COMMON------------------------------*/
 
 
@@ -41,12 +54,77 @@ a {
     left: 0;
     width: 100%;
     background-color: orangered;
-    height: 80px;
+    height: var(--header-height-);
     box-shadow: 3px 0px 3px 3;
+    color: white;
 }
 
+.header .flex {
+
+}
+
+.main-menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.user-menu {
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.logo{
+    display: flex;
+    width: 20%;
+}
 /*----------------------------END HEADER----------------------------*/
 
 /*-------------------------------MAIN--------------------------------*/
+main {
+    padding-top: calc(var(--header-height) + 20px);
+}
+.card {}
 
+.card-img {
+    position: relative;
+}
+
+.front-img {}
+
+.back-img {
+    display: none;
+}
+
+
+.card-txt {}
+
+.card:hover .back-img {
+    display: inline-block;
+}
+
+.card:hover .front-img {
+    display: none;
+}
+
+.heart {
+    position:absolute;
+    top: 10px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+.heart:hover {
+    color: red;
+}
+
+.tag-list {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
 /*-----------------------------END MAIN-------------------------------*/
